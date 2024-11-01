@@ -1,0 +1,94 @@
+.rules {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.rules .title {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.rules .rules-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rules .rules-section .name {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.rules .rules-section .name-lower {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.rules .rules-section .rule {
+    padding-left: 30px;
+    font-size: 18px;
+}
+
+.rules .rules-section .rule.red {
+    color: #f72f49;
+    text-decoration: underline;
+}
+
+.rules .rules-section .rule.inner {
+    padding-left: 50px;
+}
+
+.rules .rules-section .rule.even-inner {
+    padding-left: 70px;
+}
+
+.tables {
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.ban-policy {
+    position: relative;
+    width: 100%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+.ban-policy td,
+.ban-policy th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.ban-policy tr:nth-child(even) {
+    background-color: #38a2e5;
+}
+
+.important-message {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: #f72f49;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+    .tables {
+        flex-direction: column;
+    }
+}

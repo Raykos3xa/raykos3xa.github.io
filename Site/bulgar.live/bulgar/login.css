@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap");
+
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+  --first-color: #1d76a6;
+  --first-color-light: light-gray;
+  /*--white-color: #f6f6f6;*/
+  --body-font: "Roboto Condensed", sans-serif;
+  --normal-font-size: 1rem;
+  --z-fixed: 100;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: 0.5s;
+  background: rgb(45, 56, 60);
+  color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main .background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+
+header .logo {
+  width: 100px;
+}
+
+.button {
+  position: relative;
+  width: fit-content;
+  padding-left: 40px;
+  padding-right: 50px;
+  height: 50px;
+  background-color: #38a2e5;
+  -webkit-clip-path: polygon(
+          0 0,
+          calc(100% - 32px) 0,
+          100% 60%,
+          100% 100%,
+          0 100%,
+          0 50%
+  );
+  clip-path: polygon(
+          0 0,
+          calc(100% - 32px) 0,
+          100% 60%,
+          100% 100%,
+          0 100%,
+          0 50%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px !important;
+}
+
+.button i {
+  position: relative;
+  left: 0;
+  transition: 0.2s;
+  font-size: 20px;
+}
+
+.button:hover i {
+  transition: 0.2s;
+  left: 20px;
+}
+
+.apply-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 75px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 900px;
+}
+
+.apply-text .title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.apply-text .desc {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.about-us {
+  position: relative;
+  width: 99%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.about-us .about-us-img {
+  position: relative;
+  width: 100%;
+}
+
+.about-us .info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+}
+
+.about-us .info .title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.about-us .info .desc {
+  font-size: 25px;
+}
+
+.about-us .links {
+  display: flex;
+  gap: 15px;
+}
+
+.subscriptions {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subscriptions .title-sub {
+  font-size: 50px;
+  font-size: 700;
+  padding-left: 50px;
+  font-weight: 700;
+}
+
+.subscriptions .desc-sub {
+  font-size: 25px;
+  font-size: 700;
+  padding-left: 50px;
+}
+
+.subscriptions .subscriptions-list {
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.subscriptions .subscriptions-list .coming-soon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 80px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 100000;
+}
+
+.subscriptions .subscriptions-list {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.subscriptions .subscriptions-list::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.subscriptions .subscriptions-list .subscription {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1d76a6;
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(0 0, 82% 0, 100% 12%, 100% 100%, 0 100%, 0 50%);
+  clip-path: polygon(0 0, 82% 0, 100% 12%, 100% 100%, 0 100%, 0 50%);
+  box-shadow: var(0 0 #0000, 0 0 #0000), var(0 0 #0000, 0 0 #0000),
+  var(0 0 #0000);
+  min-width: 350px;
+  opacity: 0.5;
+}
+
+.subscriptions .subscriptions-list .subscription .title {
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subscriptions .subscriptions-list .subscription .desc {
+  font-size: 22px;
+}
+
+.subscriptions .subscriptions-list .subscription .actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscriptions .subscriptions-list .subscription .actions .price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-light-blue {
+  background-color: #38a2e5 !important;
+}
+
+.bg-dark-blue {
+  background-color: #1d76a6 !important;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+footer .side {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+footer .side .logo {
+  width: 400px;
+}
+
+footer .copyright {
+  font-size: 20px;
+}
+
+footer .side .server-status {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1d76a6;
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(
+          0 0,
+          calc(100% - 42px) 0,
+          100% 30%,
+          100% 100%,
+          0 100%,
+          0 50%
+  );
+  clip-path: polygon(
+          0 0,
+          calc(100% - 42px) 0,
+          100% 30%,
+          100% 100%,
+          0 100%,
+          0 20%
+  );
+  box-shadow: var(0 0 #0000, 0 0 #0000), var(0 0 #0000, 0 0 #0000),
+  var(0 0 #0000);
+}
+
+footer .side .server-status .info {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  font-size: 22px;
+}
+
+footer .side .server-status .info span.bold {
+  font-weight: 700;
+}
+
+footer .side .server-status .button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+footer .side .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+  background-color: #1d76a6;
+  -webkit-clip-path: polygon(
+          0 0,
+          calc(100% - 72px) 0,
+          100% 30%,
+          100% 100%,
+          0 100%,
+          0 50%
+  );
+  clip-path: polygon(
+          0 0,
+          calc(100% - 72px) 0,
+          100% 20%,
+          100% 100%,
+          0 100%,
+          0 20%
+  );
+  box-shadow: var(0 0 #0000, 0 0 #0000), var(0 0 #0000, 0 0 #0000),
+  var(0 0 #0000);
+}
+
+footer .side .links .side {
+  position: relative;
+  width: 50%;
+  align-items: baseline;
+  padding-left: 40px;
+}
+
+footer .side .links .side a {
+  text-decoration: none;
+  color: white;
+  text-align: left;
+  font-size: 24px;
+}
+
+footer .side .links .side a:hover {
+  color: #38a2e5;
+}
+
+footer .side .links .side:nth-child(1) {
+  border-right: 1px solid white;
+}
+
+@media screen and (max-width: 1300px) {
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us .info {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .subscriptions .title-sub {
+    padding-left: 20px;
+  }
+
+  .subscriptions .desc-sub {
+    padding-left: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer .side {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .apply-text {
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  footer .side {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .apply-text .title {
+    font-size: 30px;
+  }
+
+  .apply-text .desc {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer .side .links .side a {
+    font-size: 18px;
+  }
+}

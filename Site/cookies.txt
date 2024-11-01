@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+bulgar.live	TRUE	/	FALSE	1999999999	PHPSESSID	ts4p5t4mrrqrapkvapok8l09fs
+bulgar.live	TRUE	/	FALSE	1999999999	samesite	lax
+
